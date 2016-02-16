@@ -1,0 +1,23 @@
+<div class="panel panel-default" data-ng-init="vm.initDetails()">
+
+    <div class="panel-heading"><h3>{{vm.pageTitle}}</h3></div>
+    <div class="panel-body">
+
+        <h4>Position</h4>
+        <p>{{vm.job.position}}</p>
+
+        <h5>Company</h5>
+        <p>{{vm.job.company}}</p>
+
+        <h6>Description</h6>
+        <p>{{vm.job.description}}</p>
+
+        <h7>Interval</h7>
+        <p>from: {{vm.job.startAt | date}}</p>
+        <p>to: {{vm.job.endAt | date}}</p>
+
+    </div>
+
+</div>
+
+<a href="#/jobs/" class="btn btn-primary btn-block">Back to Jobs</a>

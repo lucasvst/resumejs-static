@@ -1,0 +1,39 @@
+<div data-ng-controller="JobController">
+
+    <div class="panel panel-default">
+        <div class="panel-heading"><h3>{{vm.pageTitle}}</h3></div>
+        <div class="panel-body">
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>company</th>
+                        <th>position</th>
+                        <th>startAt</th>
+                        <th>endAt</th>
+                        <th>description</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody data-ng-init="vm.initList()">
+                    <tr data-ng-repeat="job in vm.jobs">
+                        <td>{{job.company}}</td>
+                        <td>{{job.position}}</td>
+                        <td>{{job.startAt | date:'dd/MM/yyyy'}}</td>
+                        <td>{{job.endAt | date:'dd/MM/yyyy'}}</td>
+                        <td>{{job.description}}</td>
+                        <td class="text-right">
+                            <a href="/#/jobs/{{job._id}}" class="btn btn-xs btn-info">view</a>
+                            <a href="/#/jobs/update/{{job._id}}" class="btn btn-xs btn-primary">update</a>
+                            <button data-ng-click="vm.remove(job)" class="btn btn-xs btn-danger">delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <a href="#/jobs/add" class="btn btn-primary btn-block">Add Job</a>
+
+</div>

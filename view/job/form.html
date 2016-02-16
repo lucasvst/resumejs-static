@@ -1,0 +1,39 @@
+<form class="form" data-ng-init="vm.initPersist()" data-ng-submit="vm.save(vm.job)">
+  <fieldset>
+    <legend>New Job</legend>
+    <div class="form-group">
+        <label for="job-company" class="control-label">Company</label>
+        <input type="text" class="form-control" id="job-company" placeholder="Company Name" required data-ng-model="vm.job.company">
+    </div>
+    <div class="form-group">
+        <label for="job-position" class="control-label">Position</label>
+        <input type="text" class="form-control" id="job-position" placeholder="Position" required data-ng-model="vm.job.position">
+    </div>
+    <div class="form-group">
+        <label for="job-description" class="control-label">Description</label>
+        <input type="text" class="form-control" id="job-description" placeholder="Description" data-ng-model="vm.job.description">
+    </div>
+
+    <div class="form-group">
+        <label for="job-startAt" class="control-label">Start At</label>
+        <input type="date" class="form-control" id="job-startAt" placeholder="" data-ng-model="vm.job.startAt">
+    </div>
+
+    <div class="form-group">
+        <label for="job-endAt" class="control-label">End At</label>
+        <input type="date" class="form-control" id="job-endAt" placeholder="" data-ng-model="vm.job.endAt">
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-2">
+                <a href="/#/" class="btn btn-default btn-block">Cancel</a>
+            </div>
+            <div class="col-xs-10">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </div>
+    </div>
+
+  </fieldset>
+</form>
